@@ -28,7 +28,7 @@ def test_login_user():
     """This test checks user login"""
     username = 'Group_1'
     password = '1234567890'
-    pesponse = login_user(username, password)
+    response = login_user(username, password)
     with allure.step('Send request. Check the status code'):
         assert response.status_code == 200, 'wrong status code'
     with allure.step('Check message in response body'):
