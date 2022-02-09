@@ -1,7 +1,7 @@
-from FinalTask.SDA.constans import USERNAME_LOGIN, PASSWORD_LOGIN
-from FinalTask.SDA.locators.login_page_locators import LoginPageLocators
-from FinalTask.SDA.pages.admin_page import AdminPage
-from FinalTask.SDA.pages.base_page import BasePage
+from constans import USERNAME_LOGIN, PASSWORD_LOGIN
+from locators.login_page_locators import LoginPageLocators
+from pages.admin_page import AdminPage
+from pages.base_page import BasePage
 
 
 class LoginPage(BasePage):
