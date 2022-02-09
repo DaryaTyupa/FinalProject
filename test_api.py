@@ -1,6 +1,6 @@
 import allure
 
-from FinalTask.SDA.pages.http_steps import create_user, login_user, get_user_info, do_logout, del_user
+from pages.http_steps import create_user, login_user, get_user_info, do_logout, del_user
 
 
 @allure.story('Creation of new user')
