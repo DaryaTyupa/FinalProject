@@ -1,5 +1,5 @@
-from FinalTask.SDA.locators.admin_page_locators import AdminPageLocators
-from FinalTask.SDA.pages.base_page import BasePage
+from locators.admin_page_locators import AdminPageLocators
+from pages.base_page import BasePage
 
 
 class AdminPage(BasePage):
