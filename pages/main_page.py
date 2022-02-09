@@ -1,7 +1,7 @@
-from FinalTask.FinalProgect.locators.main_page_locators import MainPageLocators
-from FinalTask.FinalProgect.pages.admin_page import AdminPage
-from FinalTask.FinalProgect.pages.base_page import BasePage
-from FinalTask.FinalProgect.pages.login_page import LoginPage
+from locators.main_page_locators import MainPageLocators
+from pages.admin_page import AdminPage
+from pages.base_page import BasePage
+from pages.login_page import LoginPage
 
 
 class MainPage(BasePage):
