@@ -3,25 +3,20 @@ from allure_commons._allure import step
 
 
 def create_user(new_user):
-    response = requests.post('https://petstore.swagger.io/v2/user', json=new_user)
-    return response
+    return requests.post('https://petstore.swagger.io/v2/user', json=new_user)
 
 
 def login_user(username, password):
-    response = requests.get(f'https://petstore.swagger.io/v2/user/login?username={username}&password={password}')
-    return response
+    return requests.get(f'https://petstore.swagger.io/v2/user/login?username={username}&password={password}')
 
 
 def get_user_info(username):
-    response = requests.get(f'https://petstore.swagger.io/v2/user/{username}')
-    return response
+    return requests.get(f'https://petstore.swagger.io/v2/user/{username}')
 
 
 def do_logout():
-    response = requests.get('https://petstore.swagger.io/v2/user/logout')
-    return response
+    return requests.get('https://petstore.swagger.io/v2/user/logout')
 
 
 def del_user(username):
-    response = requests.delete(f'https://petstore.swagger.io/v2/user/{username}')
-    return response
+    return requests.delete(f'https://petstore.swagger.io/v2/user/{username}')
