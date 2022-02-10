@@ -59,6 +59,7 @@ def test_user_logout():
 def test_del_user():
     """This test checks user delete"""
     username = 'Group_1'
+    del_user(username)
     response = del_user(username)
     with allure.step('Send request. Check the status code'):
         assert response.status_code == 200, 'wrong status code'
