@@ -1,6 +1,6 @@
 import allure
-from FinalTask.FinalProgect.pages.db_steps import create_group, get_group_name
-from FinalTask.FinalProgect.pages.main_page import MainPage
+from pages.db_steps import create_group, get_group_name
+from pages.main_page import MainPage
 
 
 @allure.story('Creation of new group using database')
