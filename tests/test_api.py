@@ -1,6 +1,6 @@
 import allure
 
-from FinalTask.FinalProgect.pages.http_steps import create_user, login_user, get_user_info, do_logout, del_user
+from pages.http_steps import create_user, login_user, get_user_info, do_logout, del_user
 
 
 @allure.story('Creation of new user')
@@ -49,10 +49,11 @@ def test_get_user_info():
 @allure.story('User logout')
 def test_user_logout():
     """This test checks user logout"""
+    response = do_logout()
     with allure.step('Send request. Check the status code'):
-        assert do_logout().status_code == 200, 'wrong status code'
+        assert response.status_code == 200, 'wrong status code'
     with allure.step('Check message in response body'):
-        assert 'ok' in do_logout().text, 'user wasn\'t logout'
+        assert 'ok' in response.text, 'user wasn\'t logout'
 
 
 @allure.story('Delete user')
