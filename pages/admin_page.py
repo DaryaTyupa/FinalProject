@@ -12,7 +12,7 @@ class AdminPage(BasePage):
     def get_first_group(self):
         return self.find_element(AdminPageLocators.FIRST_GROUP_LOCATOR)
 
-    def open_chage_group(self):
+    def open_change_group(self):
         group_link = AdminPage.get_first_group(self)
         group_link.click()
         return AdminPage(self.driver, self.driver.current_url)
