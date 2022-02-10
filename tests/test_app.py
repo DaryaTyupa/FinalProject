@@ -1,6 +1,6 @@
 import allure
-from FinalTask.FinalProgect.pages.db_steps import create_group, get_group_name
-from FinalTask.FinalProgect.pages.main_page import MainPage
+from pages.db_steps import create_group, get_group_name
+from pages.main_page import MainPage
 
 
 @allure.story('Creation of new group using database')
@@ -40,5 +40,5 @@ def test_change_group_name(driver, connect_to_db):
     with allure.step('Check the changed group name in database'):
         assert 'Group_1_changed' in get_group_name(connect_to_db)[0], 'no such group changed'
 
-pytest tests/ --reruns 2
-pytest-rerunfailures==4.1
+# pytest tests/ --reruns 2
+# pytest-rerunfailures==4.1
