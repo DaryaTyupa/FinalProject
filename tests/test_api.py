@@ -10,7 +10,7 @@ def test_create_user():
         "id": 666,
         "username": "Group_1",
         "firstName": "Daria",
-        "lastName": "Andrei",
+        "lastName": "Tyupa",
         "email": "tms@tut.by",
         "password": "1234567890",
         "phone": "987654321",
@@ -20,13 +20,13 @@ def test_create_user():
     with allure.step('Send request. Check the status code'):
         assert response.status_code == 200, 'wrong status code'
     with allure.step('Check user id in response body'):
-        assert '666' in create_user(new_user).text, 'no such user id'
+        assert '666' in response.text, 'no such user id'
 
 
 @allure.story('Login new user')
 def test_login_user():
     """This test checks user login"""
-    username = 'Group_1'
+    username = 'Username_1'
     password = '1234567890'
     response = login_user(username, password)
     with allure.step('Send request. Check the status code'):
@@ -38,12 +38,12 @@ def test_login_user():
 @allure.story('Get user information')
 def test_get_user_info():
     """This test checks user information"""
-    username = 'Group_1'
+    username = 'Username_1'
     response = get_user_info(username)
     with allure.step('Send request. Check the status code'):
         assert response.status_code == 200, 'wrong status code'
     with allure.step('Check user information in response body'):
-        assert 'Daria' in response.text and 'Andrei' in response.text, 'no such user information'
+        assert 'Daria' in response.text and 'Tyupa' in response.text, 'no such user information'
 
 
 @allure.story('User logout')
@@ -59,7 +59,7 @@ def test_user_logout():
 @allure.story('Delete user')
 def test_del_user():
     """This test checks user delete"""
-    username = 'Group_1'
+    username = 'Username_1'
     response = del_user(username)
     with allure.step('Send request. Check the status code'):
         assert response.status_code == 200, 'wrong status code'
