@@ -64,4 +64,4 @@ def test_del_user():
     with allure.step('Send request. Check the status code'):
         assert response.status_code == 200, 'wrong status code'
     with allure.step('Check the name of deleted user in response body'):
-        assert 'Username_1' in response.text, 'user wasn\'t delete'
+        assert username in response.text, 'user wasn\'t delete'
