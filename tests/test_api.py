@@ -8,7 +8,7 @@ def test_create_user():
     """This test checks creation of user by status_code and user_id"""
     new_user = {
         "id": 666,
-        "username": "Group_1",
+        "username": "Username_1",
         "firstName": "Daria",
         "lastName": "Tyupa",
         "email": "tms@tut.by",
@@ -64,4 +64,4 @@ def test_del_user():
     with allure.step('Send request. Check the status code'):
         assert response.status_code == 200, 'wrong status code'
     with allure.step('Check the name of deleted user in response body'):
-        assert 'Group_1' in response.text, 'user wasn\'t delete'
+        assert 'Username_1' in response.text, 'user wasn\'t delete'
